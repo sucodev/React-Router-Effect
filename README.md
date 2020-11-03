@@ -2,14 +2,15 @@
 Para começar a utilizar o React Router Effect, será necessário instalar o : react-router-dom ( versão 6.0 beta )
 
 ### Instalação : 
-1) yarn add history babel-types react-router-dom@next;
-2) npm i history react-router-dom@next;
+1) ```yarn add history babel-types react-router-dom@next```
+2) ```npm i history react-router-dom@next```
 
 ### Exemplos de uso : 
 Dentro de Routes, declare o componente RouterEffect e passe como parâmetro o tempo em que o componente será renderizado em tela.
 Já, para aplicar as animações nos componentes será preciso declarar em um estilo global as classes que estão no arquivo style.css 
 No Exemplo abaixo, o componente <Contact/>, levará 500ms para ser renderizado após o clique do usuário.
 
+```
  <Routes>
   <RouterEffect path="/" element={<Home />} time={600} end />
   <RouterEffect path="about" element={<About />} time={800} />
@@ -17,9 +18,9 @@ No Exemplo abaixo, o componente <Contact/>, levará 500ms para ser renderizado a
   <RouterEffect path="p/:id" element={<Post />} time={500} />
   <RouterEffect path="*" element={<NotExist />} time={500} />
  </Routes>
- 
+``` 
  ### Componente Contato
- 
+ ```
  import React from 'react';
  import { Container } from './style';
 
@@ -33,9 +34,9 @@ No Exemplo abaixo, o componente <Contact/>, levará 500ms para ser renderizado a
   };
 
 export default Contact;
-
+```
 ### Componente Com Link
-
+```
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -75,4 +76,4 @@ const Home = () => {
 };
 
 export default Home;
-
+```
